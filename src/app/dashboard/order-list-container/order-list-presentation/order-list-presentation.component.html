@@ -1,0 +1,66 @@
+<div class="order-list-wrapper h-100 w-100 p-4">
+    <div class="container">
+        <h1>Live Orders</h1>
+        <div class="row">
+            <div class="col">
+                <div>
+                    <span class="bi bi-bag-fill"></span>
+                </div>
+                <div>
+                    <h1>47</h1>
+                    <p>Orders</p>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <span class="bi bi-bag-fill"></span>
+                </div>
+                <div>
+                    <h1>47</h1>
+                    <p>Orders</p>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <span class="bi bi-bag-fill"></span>
+                </div>
+                <div>
+                    <h1>47</h1>
+                    <p>Orders</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h1>Orders</h1>
+            <a class="btn btn-primary rounded-0 me-4 shadow" (click)="openForm()">Add New Order
+            </a>
+        </div>
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Date and time</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of orderList">
+                        <th scope="row">{{ data.id }}</th>
+                        <td>
+                            {{ data.userName }}
+                        </td>
+                        <td>{{data.dateNtime }}</td>
+                        <td>{{ data.price }}</td>
+                        <td>{{ data.status }}</td>
+                        <td><span class="bi bi-three-dots-vertical"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
